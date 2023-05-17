@@ -1,0 +1,16 @@
+# https://dart.dev/guides/language/analysis-options
+#  dart pub add --dev lints
+include: package:lints/recommended.yaml
+
+analyzer:
+  exclude: [build/**]
+  language:
+    strict-casts: true
+    strict-raw-types: true
+  # https://dart.dev/tools/experiment-flags
+  enable-experiment:
+    - records
+
+linter:
+  rules:
+    - cancel_subscriptions
