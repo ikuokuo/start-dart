@@ -36,3 +36,7 @@ dart 2_language/tour.dart
   - [metadata.dart](2_language/metadata.dart)
   - [libraries.dart](2_language/libraries.dart)
   - [types.dart](2_language/types.dart)
+  - [patterns.dart](2_language/patterns.dart)
+  - [functions.dart](2_language/functions.dart)
+  - [control_flow.dart](2_language/control_flow.dart)
+  - [error_handling.dart](2_language/error_handling.dart)
