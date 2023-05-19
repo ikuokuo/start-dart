@@ -40,3 +40,4 @@ dart 2_language/tour.dart
   - [functions.dart](2_language/functions.dart)
   - [control_flow.dart](2_language/control_flow.dart)
   - [error_handling.dart](2_language/error_handling.dart)
+  - [classes.dart](2_language/classes.dart)
