@@ -1,0 +1,15 @@
+{
+  "books": [
+    {
+      "isbn": "0",
+      "name": "book0",
+      "author": ""
+    },
+    {
+      "isbn": "1",
+      "name": "book1",
+      "author": ""
+    }
+  ],
+  "timestamp": "2023-05-20T00:00:00.000Z"
+}
