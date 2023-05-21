@@ -43,3 +43,7 @@ dart 2_language/tour.dart
   - [classes.dart](2_language/classes.dart)
   - [concurrency.dart](2_language/concurrency.dart)
   - [null_safety.dart](2_language/null_safety.dart)
+- 3_library/
+  - [tour.dart](3_library/tour.dart)
+    - [http_server.dart](3_library/http/http_server.dart)
+    - [http_client.dart](3_library/http/http_client.dart)
