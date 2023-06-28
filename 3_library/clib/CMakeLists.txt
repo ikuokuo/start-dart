@@ -1,0 +1,47 @@
+cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
+project(clib VERSION 1.0.0 LANGUAGES C CXX)
+
+set(MY_CURR ${PROJECT_SOURCE_DIR})
+get_filename_component(MY_ROOT "${MY_CURR}/../.." ABSOLUTE)
+
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Release)
+endif()
+
+message(STATUS "MY_ROOT: ${MY_ROOT}")
+message(STATUS "CMAKE_BUILD_TYPE: ${CMAKE_BUILD_TYPE}")
+message(STATUS "CMAKE_INSTALL_PREFIX: ${CMAKE_INSTALL_PREFIX}")
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+#set(CMAKE_VERBOSE_MAKEFILE ON)
+
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED on)
+
+# clib
+
+add_library(clib SHARED clib.cc)
+set_target_properties(clib PROPERTIES
+  PUBLIC_HEADER clib.h
+  VERSION ${PROJECT_VERSION}
+  SOVERSION 1
+  OUTPUT_NAME "clib"
+  XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY "Hex_Identity_ID_Goes_Here"
+)
+
+# main
+
+add_executable(main main.cc)
+target_link_libraries(main clib)
+
+# install
+
+include(GNUInstallDirs)
+install(TARGETS clib main
+  PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+  ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+)
+
+include(CMakePackageConfigHelpers)
