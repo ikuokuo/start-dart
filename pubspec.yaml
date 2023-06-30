@@ -15,4 +15,5 @@ dependencies:
   path: ^1.8.3
 
 dev_dependencies:
+  ffigen: ^8.0.2
   lints: ^2.1.1

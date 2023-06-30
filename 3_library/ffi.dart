@@ -13,8 +13,9 @@ How to build & run
   ./install/bin/main
 
   cd start-dart/
-  # dart pub add path ffi
   dart pub get
+  # dart pub add path ffi
+
   dart 3_library/ffi.dart
 */
 import 'dart:ffi';

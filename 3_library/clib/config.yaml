@@ -1,0 +1,6 @@
+name: CLib
+description: Bindings to `clib.h`.
+output: 'clib.dart'
+headers:
+  entry-points:
+    - 'clib.h'
